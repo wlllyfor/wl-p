@@ -6,21 +6,21 @@
 
  // 1.直接调用函数，严格模式为undefined，非严格模式为window
  function fn1 () {
-   console.log(this)
+  //  console.log(this)
  }
  fn1()
 
  // 2.对象中的函数，this为这个对象
  const obj1 = {
   fnA() {
-    console.log(this)
+    // console.log(this)
   }
  }
  obj1.fnA()
 
  // 3.构造函数中，this为新建的实例
  const Person = function(name) {
-   console.log(this)
+  //  console.log(this)
    this.name = name
  }
  const p = new Person('wanglin')
@@ -48,6 +48,24 @@ Function.prototype.myCall = function () {
 }
 
 fn2.myCall(obj2, 5, 6, 7, 8)
-console.log(obj2)
+// console.log(obj2)
 
 // 手写一个forEach
+
+const arr = [{name: 'wanglin'}, {name: 'liuyan'}, {name: 'zhangsan'}]
+
+arr.forEach((item, index) => {
+  console.log(this)
+})
+
+function myForEach (arr, callback) {
+  for(let i = 0; i < arr.length; i++) {
+    // callback.call(arr[i], arr[i], i)
+    callback(arr[i], i)
+  }
+}
+
+myForEach (arr, (item, index) => {
+  // console.log(this)
+  // console.log(item, index)
+})
