@@ -2,7 +2,6 @@
 // import './js-basic/function/2.this'
 
 // import './leetcode/offer/18'
-import './leetcode/01'
-import './leetcode/offer/21'
+import './leetcode/07'
 
 // import './js-basic/array/1.遍历数组'
