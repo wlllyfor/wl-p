@@ -2,18 +2,13 @@
  * @param {number} x
  * @return {number}
  */
+// 字符串拼接法
 var reverse = function(x) {
-  if(x === 0) {
-    return 0
+  const k =  parseInt(Array.from(Math.abs(x)+'').reverse().join(''))
+  if (k < - (2 ** 31) || k > 2 ** 31 -1) {
+      return 0
   }
-  const str = x + ''
-  const arr = str.split('').filter(item => item !== '0')
-  if(arr[0] === '-') {
-    arr.shift()
-    return parseInt('-' + arr.reverse().join(''))
-  } else {
-    return parseInt(arr.reverse().join(''))
-  }
+  return x < 0 ? - k : k
 };
 
-console.log(reverse(0))
+reverse(1011110)
