@@ -12,12 +12,12 @@ module.exports = {
   },
   mode: 'development',
   module: {
-    rules: [
-      {
-        test: /.js$/,
-        use: 'babel-loader'
-      }
-    ]
+    // rules: [
+    //   {
+    //     test: /.js$/,
+    //     use: 'babel-loader'
+    //   }
+    // ]
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
@@ -39,5 +39,6 @@ module.exports = {
   devServer: {
     contentBase: './dist',
     hot: true
-  }
+  },
+  devtool: 'inline-cheap-source-map'
 };

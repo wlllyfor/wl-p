@@ -4,10 +4,10 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
-  const map = {}
   const res = []
-  nums.forEach((item, index) => {
-    if(map[target - item] === undefined) {
+  const map = {}
+  nums.forEach( (item, index) => {
+    if(!map[target  - item]) {
       map[item] = index
     } else {
       res.push(index, map[target - item])
@@ -16,4 +16,4 @@ var twoSum = function(nums, target) {
   return res
 };
 
-console.log(twoSum([2, 7, 11, 15], 18))
+console.log(twoSum([2, 7, 11, 15], 9))
