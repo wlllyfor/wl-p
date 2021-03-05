@@ -183,8 +183,152 @@
 /**
  * String() 和toString() 的区别
  */
-//  console.log(String(null))
-//  console.log(null.toString()) // 报错
+  //  console.log(String(null))
+  //  console.log(null.toString()) // 报错
+  // console.log({}.toString())  // [object Object]
 /**
  * null和undefined没有toString这个方法，可以调用String
+ */
+
+/**
+ * Symbol的用处
+ * 给对象添加唯一属性，即使重名也不会被覆盖
+ */
+
+  // const obj = {
+  //   name: 'wanglin'
+  // }
+  // const s1 = Symbol('name')
+  // const s2 = Symbol('name')
+  // obj[s1] = 'wanglin1'
+  // obj[s2] = 'wanglin2'
+
+  // console.log(obj)
+
+/**
+ * toString 和 toLocaleString的区别
+ */
+
+  // const date = new Date()
+  // console.log(date.toString())
+  // console.log(date.toLocaleString())
+  // const num = 100000000
+  // console.log(num.toString())
+  // console.log(num.toLocaleString())
+
+/**
+ * ++a 和 a++ 有什么区别
+ */
+
+  // let num1 = 20
+  // let num2 = 20
+  // console.log(++num1 + 1)
+  // console.log(num2++ + 1)
+  // let str = 'aaa'
+  // console.log(++str)
+  // let booleanTrue = true
+  // console.log(++booleanTrue)
+
+/**
+ * 说一说逻辑与操作符和或操作符的短路特性
+ */
+
+// console.log(false && abc)   // 不会报错
+
+// console.log(true || abc)    // 不会报错
+
+/**
+ * && 前面为false，后面的不会执行
+ * || 前面为true， 后面的不会执行
+ */
+
+/**
+ * == 和 === 的区别
+ */
+  // console.log( 1 == '1')   // true
+  // console.log( 1 === '1' ) // false
+  // console.log(NaN != NaN)
+  // console.log(undefined == 0)
+/**
+ * == 会转换数据类型， === 不转换
+ */
+
+/**
+ * 引用类型传参问题
+ */
+
+//  function test(obj, arr) {
+//    obj.name = 'wanglin'
+//    arr.push(1,2,3)
+//  }
+
+//  const person = {}
+//  const nums = []
+//  test(person, nums)
+//  console.log(person, nums)
+/**
+ * 引用类型传入函数中被修改，它本身会改变
+ */
+
+// const arr = [1,2,3,4,5]
+// console.log(arr.copyWithin(2))
+
+// const arr = [1,2,3]
+// arr.push(4, 5)
+// arr.pop()
+// arr.unshift(-1, 0)
+// arr.shift()
+// console.log(arr)
+
+/**
+ * sort方法如何实现降序升序
+ */
+
+// function compare(val1, val2) {
+//   if (val1 < val2) {
+//     return -1
+//   } else if (val1 > val2) {
+//     return 1
+//   } else {
+//     return 0
+//   }
+// }
+
+// const arr = [1, 2, 3, -5, -2]
+// arr.sort(compare)
+// console.log(arr)
+
+/**
+ * splice方法如何实现插入、删除和替换
+ */
+
+// const arr = [1, 2, 3, 4]
+
+// // 插入
+// arr.splice(1, 0 , 'str')
+// console.log(arr)
+// // 删除
+// arr.splice(1, 1)
+// console.log(arr)
+// // 替换
+// arr.splice(1, 1, 'qwer')
+// console.log(arr)
+
+/**
+ * 如何跳出forEach
+ */
+
+// forEach遍历数组不支持break和continue，用return跳出
+// 1,3，return相当于for循环中的continue
+// const arr = [1, 2, 3]
+// arr.forEach(item => {
+//     if(item === 2) {
+//         return 
+//     } else {
+//         console.log(item)
+//     }
+// })
+
+/**
+ * reduce的用法
  */

@@ -11,3 +11,14 @@
 11.打印NaN == NaN
 12.Number()、parseInt()、parseFloat()的区别
 13.String() 和toString() 的区别
+14.Symbol的用处
+15.toString 和 toLocaleString的区别
+16. ++a 和 a++ 有什么区别
+17. 说一说逻辑与操作符的短路特性
+18. == 和 === 的区别
+19. sort方法如何实现降序升序
+20. splice方法如何实现插入、删除和替换
+21. 如何跳出forEach
+22. reduce的用法
+23. 使用Object还是Map
+24. Map和WeakMap的区别
