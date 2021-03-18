@@ -332,3 +332,32 @@
 /**
  * reduce的用法
  */
+
+/**
+ * 使用object还是map
+ */
+
+// p168
+
+/**
+ * Map和WeakMap的区别
+ */
+
+// 垃圾回收
+
+/**
+ * 合并对象
+ */
+
+// Object.assign()
+
+// const { length } = 'wanglin'
+// console.log(length)
+
+// const { constructor: c } = 5
+// console.log(c === Number)
+ 
+const obj = {
+
+}
+obj.prototyoe

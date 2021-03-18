@@ -22,3 +22,5 @@
 22. reduce的用法
 23. 使用Object还是Map
 24. Map和WeakMap的区别
+25. Object.defineProperty的用法
+26. 合并对象
